@@ -14,7 +14,7 @@ class Login extends React.Component {
     };
   }
   validateEmail() {
-    InputMail=this.state.LoginEmail;
+    InputMail = this.state.LoginEmail;
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (mailformat.test(InputMail)) {
       console.log('Y');
@@ -40,7 +40,10 @@ class Login extends React.Component {
             value="Password"
             secureTextEntry={true}
             style={styles.input}></Input>
-          <TouchableText value="Sign In" style={styles.button} onPress={()=>this.validateEmail()}></TouchableText>
+          <TouchableText
+            value="Sign In"
+            style={styles.button}
+            onPress={() => this.validateEmail()}></TouchableText>
           <View style={styles.body2}>
             <TouchableText
               value="Forgot Password ?"
