@@ -1,19 +1,13 @@
 import React from 'react';
 import {Text, View, Button, StyleSheet, TouchableOpacity} from 'react-native';
 
-TouchableText = (props) => {
+TouchableText = ({styleButton,onPress,styleText,value}) => {
   return (
-    <TouchableOpacity style={styles.buttonStyle} onPress={props.onPress}>
+    <TouchableOpacity style={styleButton} onPress={onPress}>
       
-      <Text style={props.style}>{props.value}</Text>
+      <Text style={styleText}>{value}</Text>
     </TouchableOpacity>
   );
 };
 
-const styles = StyleSheet.create({
-  buttonStyle: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
 export default TouchableText;

@@ -1,12 +1,16 @@
 import React from 'react';
 
-import { Header,View,Text,Icon} from 'react-native';
+import {View, Text, Icon, Image} from 'react-native';
+import {Header} from 'react-native-elements';
 
-ScreenHeader=()=>{
- return(
-   <View>
-   </View>
- )
-}
+ScreenHeader = ({leftComponent,rightComponent}) => {
+  return (
+    <View>
+      <Header
+        leftComponent={leftComponent}
+        rightComponent={rightComponent}></Header>
+    </View>
+  );
+};
 
 export default ScreenHeader;
